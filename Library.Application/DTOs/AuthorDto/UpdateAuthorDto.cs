@@ -1,9 +1,6 @@
-﻿using Library.Domain.Common;
-using Microsoft.VisualBasic;
+namespace Library.Application.DTOs.AuthorDto;
 
-namespace Library.Domain;
-
-public class Author : BaseEntity
+public class UpdateAuthorDto
 {
     public string FirstName { get; set; } = string.Empty;
     
@@ -13,5 +10,5 @@ public class Author : BaseEntity
     
     public string Nationality { get; set; } = string.Empty;
 
-    public ICollection<Book> Books { get; set; }  = new List<Book>();
+    public List<int> BookIds { get; set; } = new List<int>();
 }

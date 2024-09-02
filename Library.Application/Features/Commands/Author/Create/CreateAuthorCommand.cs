@@ -1,9 +1,8 @@
-﻿using Library.Domain.Common;
-using Microsoft.VisualBasic;
+﻿using MediatR;
 
-namespace Library.Domain;
+namespace Library.Application.Features.Commands.Author.Create;
 
-public class Author : BaseEntity
+public class CreateAuthorCommand : IRequest<int>
 {
     public string FirstName { get; set; } = string.Empty;
     
@@ -13,5 +12,5 @@ public class Author : BaseEntity
     
     public string Nationality { get; set; } = string.Empty;
 
-    public ICollection<Book> Books { get; set; }  = new List<Book>();
+    public ICollection<Domain.Book> Books { get; set; }  = new List<Domain.Book>();
 }
