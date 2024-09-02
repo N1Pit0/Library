@@ -6,8 +6,6 @@ namespace Library.Application.Features.Commands.Author.Create;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-
-{
 public class CreateAuthorHandler : IRequestHandler<CreateAuthorCommand, int>
 {
     private readonly IAuthorRepository _authorRepository;
@@ -29,4 +27,4 @@ public class CreateAuthorHandler : IRequestHandler<CreateAuthorCommand, int>
         return 0;
     }
 }
-}
+
