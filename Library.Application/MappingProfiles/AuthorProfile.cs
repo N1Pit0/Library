@@ -18,4 +18,5 @@ public class AuthorProfile : Profile
         
         // Delete DTO might not need mapping as it's just passing the Id
     }
+    
 }

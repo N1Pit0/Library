@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="DTOs\BookDto\" />
-      <Folder Include="DTOs\GenreDto\" />
-      <Folder Include="DTOs\LibraryUserDto\" />
-      <Folder Include="DTOs\LoanDto\" />
       <Folder Include="Exceptions\" />
       <Folder Include="Features\Queries\Author\" />
       <Folder Include="Features\Queries\Book\" />
