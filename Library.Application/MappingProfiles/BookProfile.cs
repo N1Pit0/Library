@@ -13,7 +13,6 @@ public class BookProfile : Profile
             .ForMember(dest => dest.Id, opt => opt.Ignore())  // ID is auto-generated
             .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
             .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
-            .ForMember(dest => dest.IsAvailable, opt => opt.MapFrom(src => src.CopiesAvailable > 0))
             .ForMember(dest => dest.Loans, opt => opt.Ignore());  // Loans managed separately
 
         // Mapping for BookUpdateDto to Book

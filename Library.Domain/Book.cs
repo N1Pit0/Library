@@ -12,7 +12,7 @@ public class Book : BaseEntity
 
     // Navigation Property
     public int AuthorId { get; set; }
-    public Author Author { get; set; }
+    public Author? Author { get; set; }
 
     // Availability Information
     public bool IsAvailable { get; set; }
