@@ -8,11 +8,7 @@
 
     <ItemGroup>
       <Folder Include="Exceptions\" />
-      <Folder Include="Features\Queries\Author\" />
-      <Folder Include="Features\Queries\Book\" />
-      <Folder Include="Features\Queries\Genre\" />
-      <Folder Include="Features\Queries\LibraryUser\" />
-      <Folder Include="Features\Queries\Loan\" />
+      <Folder Include="Features\Queries\GetAllDetails\" />
     </ItemGroup>
 
     <ItemGroup>

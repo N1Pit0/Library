@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Loan.Update;
+﻿using Library.Application.DTOs.LoanDto;
+using MediatR;
 
-public class UpdateLoanCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Loan.Update;
+
+public record UpdateLoanCommand(
+    LoanUpdateDto LoanUpdateDto): IRequest<Unit>;

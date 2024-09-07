@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application", "Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Domain", "Library.Domain\Library.Domain.csproj", "{5CEC886B-0BA4-45D4-9DE0-42A40CC2C0BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{7E04D758-B7EA-4409-8611-3130572F6AA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,7 @@ Global
 		{F00DA942-1127-4D0A-9ADD-6E85CC72DBF0} = {0FF62654-F8B8-493D-A22A-35263BC89DD2}
 		{6E725ABF-7502-4737-9785-27AA07D7C76D} = {CC891D68-08FE-4682-9829-F9A6480E7FAF}
 		{5CEC886B-0BA4-45D4-9DE0-42A40CC2C0BF} = {CC891D68-08FE-4682-9829-F9A6480E7FAF}
+		{7E04D758-B7EA-4409-8611-3130572F6AA5} = {F5E82599-87B9-4F0F-96D9-A7A7055FC38D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6E725ABF-7502-4737-9785-27AA07D7C76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -35,5 +38,9 @@ Global
 		{5CEC886B-0BA4-45D4-9DE0-42A40CC2C0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CEC886B-0BA4-45D4-9DE0-42A40CC2C0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CEC886B-0BA4-45D4-9DE0-42A40CC2C0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E04D758-B7EA-4409-8611-3130572F6AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E04D758-B7EA-4409-8611-3130572F6AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E04D758-B7EA-4409-8611-3130572F6AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E04D758-B7EA-4409-8611-3130572F6AA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

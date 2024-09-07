@@ -1,6 +1,8 @@
-﻿namespace Library.Application.Features.Commands.Book.Create;
+﻿using Library.Application.DTOs.BookDto;
+using MediatR;
 
-public class CreateBookCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Book.Create;
+
+public record CreateBookCommand(
+    BookCreateDto BookCreateDto) : IRequest<int>;
+

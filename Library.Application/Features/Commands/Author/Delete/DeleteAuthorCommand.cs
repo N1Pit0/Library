@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Author.Delete;
+﻿using Library.Application.DTOs.AuthorDto;
+using MediatR;
 
-public class DeleteAuthorCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Author.Delete;
+
+public record DeleteAuthorCommand(
+    AuthorDeleteDto AuthorDeleteDto) : IRequest<Unit>;

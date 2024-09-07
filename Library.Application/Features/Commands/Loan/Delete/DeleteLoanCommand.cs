@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Loan.Delete;
+﻿using Library.Application.DTOs.LoanDto;
+using MediatR;
 
-public class DeleteLoanCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Loan.Delete;
+
+public record DeleteLoanCommand(
+    LoanDeleteDto LoanDeleteDto): IRequest<Unit>;

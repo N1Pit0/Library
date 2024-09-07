@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Genre.Update;
+﻿using Library.Application.DTOs.GenreDto;
+using MediatR;
 
-public class UpdateGenreCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Genre.Update;
+
+public record UpdateGenreCommand(
+    GenreUpdateDto GenreUpdateDto): IRequest<Unit>;

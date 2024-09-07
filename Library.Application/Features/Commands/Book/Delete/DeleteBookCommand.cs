@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Book.Delete;
+﻿using Library.Application.DTOs.BookDto;
+using MediatR;
 
-public class DeleteBookCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Book.Delete;
+
+public record DeleteBookCommand(
+    BookDeleteDto BookDeleteDto) : IRequest<Unit>;

@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.LibraryUser.Delete;
+﻿using Library.Application.DTOs.LibraryUserDto;
+using MediatR;
 
-public class DeleteLibraryUserCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.LibraryUser.Delete;
+
+public record DeleteLibraryUserCommand(
+    LibraryUserDeleteDto LibraryUserDeleteDto): IRequest<Unit>;

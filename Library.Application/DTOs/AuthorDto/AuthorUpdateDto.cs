@@ -1,6 +1,6 @@
 namespace Library.Application.DTOs.AuthorDto;
 
-public class UpdateAuthorDto
+public class AuthorUpdateDto
 {
     public string FirstName { get; set; } = string.Empty;
     

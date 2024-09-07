@@ -1,6 +1,6 @@
 ﻿namespace Library.Application.DTOs.AuthorDto;
 
-public class CreateAuthorDto
+public class AuthorCreateDto
 {
     public string FirstName { get; set; } = string.Empty;
     

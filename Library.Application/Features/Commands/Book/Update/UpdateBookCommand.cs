@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Book.Update;
+﻿using Library.Application.DTOs.BookDto;
+using MediatR;
 
-public class UpdateBookCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Book.Update;
+
+public record UpdateBookCommand(
+    BookUpdateDto BookUpdateDto): IRequest<Unit>;

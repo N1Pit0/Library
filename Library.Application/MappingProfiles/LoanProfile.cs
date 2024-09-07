@@ -27,5 +27,11 @@ public class LoanProfile : Profile
 
         // Mapping for LoanDeleteDto
         // No specific mapping needed for deletion since it's just the ID
+        
+        //Query All
+        CreateMap<Loan, LoanQueryDto>()
+            .ForMember(dest => dest.Book, opt => opt.MapFrom(src => src.Book))
+            .ForMember(dest => dest.User, opt => opt.MapFrom(src => src.User));
+
     }
 }

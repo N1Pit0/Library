@@ -1,6 +1,7 @@
-﻿namespace Library.Application.Features.Commands.Genre.Delete;
+﻿using Library.Application.DTOs.GenreDto;
+using MediatR;
 
-public class DeleteGenreCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Genre.Delete;
+
+public record DeleteGenreCommand(
+    GenreDeleteDto GenreDeleteDto): IRequest<Unit>;

@@ -1,6 +1,8 @@
-﻿namespace Library.Application.Features.Commands.Loan.Create;
+﻿using Library.Application.DTOs.LoanDto;
+using MediatR;
 
-public class CreateLoanCommand
-{
-    
-}
+namespace Library.Application.Features.Commands.Loan.Create;
+
+public record CreateLoanCommand(
+    LoanCreateDto LoanCreateDto) : IRequest<int>;
+

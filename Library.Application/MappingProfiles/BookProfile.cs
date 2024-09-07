@@ -24,5 +24,11 @@ public class BookProfile : Profile
 
         // Mapping for BookDeleteDto
         // No specific mapping needed for deletion since it's just the ID
+        
+        //QueryAll
+        CreateMap<Book, BookQueryDto>()
+            .ForMember(dest => dest.Author, opt => opt.MapFrom(src => src.Author))
+            .ForMember(dest => dest.Loans, opt => opt.MapFrom(src => src.Loans));
+
     }
 }

@@ -1,6 +1,6 @@
 namespace Library.Application.DTOs.AuthorDto;
 
-public class DeleteAuthorDto
+public class AuthorDeleteDto
 {
     public int Id { get; set; }
 }

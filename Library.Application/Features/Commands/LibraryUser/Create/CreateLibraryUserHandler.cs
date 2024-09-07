@@ -1,6 +1,12 @@
-﻿namespace Library.Application.Features.Commands.LibraryUser.Create;
+﻿using MediatR;
 
-public class CreateLibraryUserHandler
+namespace Library.Application.Features.Commands.LibraryUser.Create;
+
+public class CreateLibraryUserHandler:
+    IRequestHandler<CreateLibraryUserCommand, int>
 {
-    
+    public Task<int> Handle(CreateLibraryUserCommand request, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }
