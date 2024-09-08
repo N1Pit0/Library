@@ -14,7 +14,7 @@ public static class PersistenceServiceRegistration
     {
         services.AddDbContext<LibraryDbContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("HrDatabaseConnectionString"));
+            options.UseSqlServer(configuration.GetConnectionString("LibraryDatabaseConnectionString"));
         });
         
         services.AddScoped<IBookRepository, BookRepository>();
