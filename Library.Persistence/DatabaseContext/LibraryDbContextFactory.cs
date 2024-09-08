@@ -17,7 +17,7 @@ namespace Library.Persistence.DatabaseContext
 
             // Build DbContextOptions
             var optionsBuilder = new DbContextOptionsBuilder<LibraryDbContext>();
-            var connectionString = configuration.GetConnectionString("LibraryDatabase");
+            var connectionString = configuration.GetConnectionString("LibraryDatabaseConnectionString");
 
             optionsBuilder.UseSqlServer(connectionString);
 

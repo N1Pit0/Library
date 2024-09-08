@@ -1,12 +1,39 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using Library.Application.Contracts.Persistence;
+using Library.Application.Exceptions;
+using Library.Application.Logging;
+using MediatR;
 
 namespace Library.Application.Features.Commands.Author.Delete;
 
-public class DeleteAuthorHandler:
-    IRequestHandler<DeleteAuthorCommand, Unit>
+public class DeleteAuthorCommandHandler : IRequestHandler<DeleteAuthorCommand, Unit>
 {
-    public Task<Unit> Handle(DeleteAuthorCommand request, CancellationToken cancellationToken)
+    private readonly IAuthorRepository _authorRepository;
+    private readonly IAppLogger<DeleteAuthorCommandHandler> _logger;
+    private readonly IValidator<DeleteAuthorCommand> _validator;
+
+    public DeleteAuthorCommandHandler(IAuthorRepository authorRepository, IAppLogger<DeleteAuthorCommandHandler> logger, IValidator<DeleteAuthorCommand> validator)
     {
-        throw new NotImplementedException();
+        _authorRepository = authorRepository;
+        _logger = logger;
+        _validator = validator;
+    }
+
+    public async Task<Unit> Handle(DeleteAuthorCommand request, CancellationToken cancellationToken)
+    {
+        // Retrieve the author by ID
+        var author = await _authorRepository.GetByIdAsync(request.AuthorDeleteDto.Id);
+        if (author == null)
+        {
+            _logger.LogWarning("Author not found");
+            throw new NotFoundException(nameof(Author), request.AuthorDeleteDto.Id);
+        }
+
+        // Delete the author
+        await _authorRepository.DeleteAsync(author.Id);
+        _logger.LogInformation("Author successfully deleted");
+
+        return Unit.Value;
     }
 }
+
