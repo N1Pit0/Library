@@ -24,8 +24,11 @@
 
     <ItemGroup>
       <Folder Include="Configurations\" />
-      <Folder Include="DatabaseContext\" />
-      <Folder Include="Repositories\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Library.Application\Library.Application.csproj" />
+      <ProjectReference Include="..\Library.Domain\Library.Domain.csproj" />
     </ItemGroup>
 
 </Project>
