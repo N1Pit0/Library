@@ -12,8 +12,4 @@ public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
     }
 
     // Additional methods specific to the Author entity can be implemented here
-    public Task<IEnumerable<Author>> GetAuthorsByNationality(string nationality)
-    {
-        throw new NotImplementedException();
-    }
 }

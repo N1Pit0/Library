@@ -12,8 +12,6 @@ public class BookQueryDto
     public DateTime PublishedDate { get; set; }
     public int Pages { get; set; }
     public int AuthorId { get; set; }
-    public AuthorQueryDto? Author { get; set; }
     public bool IsAvailable { get; set; }
     public int CopiesAvailable { get; set; }
-    public ICollection<LoanQueryDto> Loans { get; set; } = new List<LoanQueryDto>();
 }

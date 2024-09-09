@@ -12,4 +12,9 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
     }
 
     // Additional methods specific to the Book entity can be implemented here
+    public async Task<bool> ExistsAsync(int authorId)
+    {
+        var author = await DbContext.Authors.FindAsync(authorId);
+        return author != null;
+    }
 }

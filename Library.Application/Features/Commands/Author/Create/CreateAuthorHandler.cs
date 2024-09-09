@@ -42,6 +42,7 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommand, i
 
         return author.Id; // Returning the new author ID
     }
+    
 }
 
 

@@ -11,5 +11,5 @@ public class LibraryUserRepository : GenericRepository<LibraryUser>, ILibraryUse
     {
     }
 
-    // Additional methods specific to the Author entity can be implemented here
+    // Additional methods specific to the LibraryUser entity can be implemented here
 }

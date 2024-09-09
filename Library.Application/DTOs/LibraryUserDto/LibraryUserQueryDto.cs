@@ -11,5 +11,4 @@ public class LibraryUserQueryDto
     public string PhoneNumber { get; set; } = string.Empty;
     public DateTime RegistrationDate { get; set; }
     public DateTime? MembershipExpirationDate { get; set; }
-    public ICollection<LoanQueryDto> Loans { get; set; } = new List<LoanQueryDto>();
 }

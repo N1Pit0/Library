@@ -26,5 +26,13 @@ public class CreateBookValidator : AbstractValidator<CreateBookCommand>
 
         RuleFor(b => b.BookCreateDto.CopiesAvailable)
             .GreaterThanOrEqualTo(0).WithMessage("Copies available cannot be negative");
+        
+        
+        RuleFor(book => book.BookCreateDto.AuthorId)
+            .MustAsync(AuthorExists).WithMessage("Invalid AuthorId: The specified author does not exist.");
+    }
+    private async Task<bool> AuthorExists(int authorId, CancellationToken token)
+    {
+        return await _bookRepository.ExistsAsync(authorId);
     }
 }

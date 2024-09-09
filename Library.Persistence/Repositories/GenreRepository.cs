@@ -11,5 +11,5 @@ public class GenreRepository : GenericRepository<Genre>, IGenreRepository
     {
     }
 
-    // Additional methods specific to the Author entity can be implemented here
+    // Additional methods specific to the Genre entity can be implemented here
 }

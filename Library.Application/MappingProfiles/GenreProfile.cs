@@ -21,8 +21,7 @@ public class GenreProfile : Profile
         // No specific mapping needed for deletion since it's just the ID
         
         //Query all
-        CreateMap<Genre, GenreQueryDto>()
-            .ForMember(dest => dest.Books, opt => opt.MapFrom(src => src.Books));
+        CreateMap<Genre, GenreQueryDto>();
 
     }
 }

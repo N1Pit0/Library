@@ -25,8 +25,7 @@ public class LibraryUserProfile : Profile
         // No specific mapping needed for deletion since it's just the ID
         
         //Query All
-        CreateMap<LibraryUser, LibraryUserQueryDto>()
-            .ForMember(dest => dest.Loans, opt => opt.MapFrom(src => src.Loans));
+        CreateMap<LibraryUser, LibraryUserQueryDto>();
 
     }
 }
