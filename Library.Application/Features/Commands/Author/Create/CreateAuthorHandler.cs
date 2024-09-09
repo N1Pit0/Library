@@ -15,7 +15,10 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommand, i
     private readonly IMapper _mapper;
     private readonly IAppLogger<CreateAuthorCommandHandler> _logger;
 
-    public CreateAuthorCommandHandler(IAuthorRepository authorRepository, IMapper mapper, IAppLogger<CreateAuthorCommandHandler> logger, IValidator<CreateAuthorCommand> validator)
+    public CreateAuthorCommandHandler(
+        IAuthorRepository authorRepository,
+        IMapper mapper,
+        IAppLogger<CreateAuthorCommandHandler> logger)
     {
         _authorRepository = authorRepository;
         _mapper = mapper;

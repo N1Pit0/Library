@@ -10,13 +10,15 @@ public class DeleteAuthorCommandHandler : IRequestHandler<DeleteAuthorCommand, U
 {
     private readonly IAuthorRepository _authorRepository;
     private readonly IAppLogger<DeleteAuthorCommandHandler> _logger;
-    private readonly IValidator<DeleteAuthorCommand> _validator;
+    
 
-    public DeleteAuthorCommandHandler(IAuthorRepository authorRepository, IAppLogger<DeleteAuthorCommandHandler> logger, IValidator<DeleteAuthorCommand> validator)
+    public DeleteAuthorCommandHandler(
+        IAuthorRepository authorRepository,
+        IAppLogger<DeleteAuthorCommandHandler> logger)
     {
         _authorRepository = authorRepository;
         _logger = logger;
-        _validator = validator;
+       
     }
 
     public async Task<Unit> Handle(DeleteAuthorCommand request, CancellationToken cancellationToken)

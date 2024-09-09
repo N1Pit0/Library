@@ -14,8 +14,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("all", policyBuilder =>
-        policyBuilder.AllowAnyOrigin()
+    options.AddPolicy("\"AllowAll\"", policyBuilder =>
+        policyBuilder
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
@@ -40,6 +41,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowAll");
 
 app.MapControllers();
 
