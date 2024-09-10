@@ -4,7 +4,7 @@ using Library.Application.DTOs.AuthorDto;
 using Library.Application.Exceptions;
 using MediatR;
 
-namespace Library.Application.Features.Queries.GetAllDetails.Author.Single;
+namespace Library.Application.Features.Queries.GetSingleDetails.Author;
 
 public class GetAuthorSingleQueryHandler: IRequestHandler<GetAuthorSingleQuery, AuthorQueryDto>
 
@@ -24,7 +24,7 @@ public class GetAuthorSingleQueryHandler: IRequestHandler<GetAuthorSingleQuery, 
 
         if (author == null)
         {
-            throw new NotFoundException(nameof(Author), request.Id);
+            throw new NotFoundException(nameof(GetAllDetails.Author), request.Id);
         }
 
         return _mapper.Map<AuthorQueryDto>(author);

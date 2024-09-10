@@ -3,7 +3,7 @@ using Library.Application.Features.Commands.Author.Create;
 using Library.Application.Features.Commands.Author.Delete;
 using Library.Application.Features.Commands.Author.Update;
 using Library.Application.Features.Queries.GetAllDetails.Author;
-using Library.Application.Features.Queries.GetAllDetails.Author.Single;
+using Library.Application.Features.Queries.GetSingleDetails.Author;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
